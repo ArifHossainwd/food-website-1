@@ -127,7 +127,7 @@ export default function BestFoodMenu() {
             <div className='pt-12 w-[50%]'>
                     {OurTopis2.map(({OurTopis2Img, text1, description, text3, price}, i)=>(
                         <div key={i}>
-                            <div className=' py-10 flex gap-8 items-center bg-white pr-4 '>
+                            <div className=' py-10 flex gap-2 items-center bg-white pr-4 '>
                                 <div>
                                     <img src={OurTopis2Img} alt="img" width={100} height={100}/>
                                 </div>

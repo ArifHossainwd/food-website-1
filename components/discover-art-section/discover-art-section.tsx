@@ -26,15 +26,15 @@ export default function DiscoverArtSection() {
     ]
 
   return (
-    <div className='container ax-auto'>
-      <div className='flex py-20'>
-            <div className='w-[25%]'>
+    <div className='container ax-auto bg-[#FFFFFF]'>
+      <div className='flex justify-center items-center py-20'>
+            <div className=' pr-10 grid gap-3'>
                     <div>
                         <img src="img/discover-art-section/podina-pata.png" alt="discover img" width={60} height={60}/>
                     </div>
-                    <div>
-                        <h2>why chppse us</h2>
-                        <h1>discover art of food with us.</h1>
+                    <div className='grid gap-2'>
+                        <h2 className='text-green-600 font-bold font-abc'>why chppse us</h2>
+                        <h1 className='text-4xl font-bold'>discover art of food with us.</h1>
                     </div>
                     <div>
                         <p>embark on a journmy of culinary exploretion doscover the art of good food with us. our passion</p>
@@ -46,17 +46,31 @@ export default function DiscoverArtSection() {
                             </Button>
                     </div>
             </div>
-           <div className='w-[75%]'>
-                <div className='w-[25%]  flex justify-between'>
-                        {doscoverArtTopic.map(({imgSrc, h2, p}, i)=>(
-                            <div key={i}>
-                                <img src={imgSrc} alt="img" />
-                                <h2>{h2}</h2>
-                                <p>{p}</p>
-                            </div>
-                        ))}
+           <div >
+                <div className='flex gap-10'>
+                    {doscoverArtTopic.map(({imgSrc, h2, p}, i)=>(
+                        <div className='bg-[#FFFFFF] shadow-md p-10 grid gap-3 rounded-md' key={i}>
+                            <img src={imgSrc} alt="img" width={50} height={50}/>
+                            <h2 className='text-2xl font-bold'>{h2}</h2>
+                            <p className='text-gray-500'>{p}</p>
+                        </div>
+                    ))}
                 </div>
            </div>
+      </div>
+      
+      <div className='grid gap-4'>
+            <div className='flex justify-center items-center gap-4'>
+                <img src="/img/discover-art-section/discover-img-1.jpg" alt="img" width={300}/>
+                <img src="/img/discover-art-section/discover-img-2.jpg" alt="img"  width={300}/>
+                <img src="/img/discover-art-section/discover-img-3.png" alt="img"  width={300}/>
+                
+            </div>
+            <div className='flex justify-center items-center gap-4'>
+                <img src="/img/discover-art-section/discover-img-5.png" alt="img"  width={300}/>
+                <img src="/img/discover-art-section/discover-img-4.png" alt="img"  width={300}/>
+         
+            </div>
       </div>
     </div>
   )
